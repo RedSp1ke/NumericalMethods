@@ -114,12 +114,4 @@ pub fn main() !void {
     std.debug.print("Min it count: {d}\nfor omega: {d}\n\n", .{ min_it, min_omega });
     std.debug.print("Upper relaxation:\n", .{});
     print_vec(try mtx.upper_relaxation(vecin.items, res, min_omega, 1e-8, &min_it));
-
-    // std.debug.print("Norm differnce: {d}\n", .{mat.vec_norm_sub(fmat_in, try fmat.mulv_al(fmat_out))});
-    // std.debug.print("Condition numb: {d}\n", .{try fmat.condition_al()});
-    // std.debug.print("Determinant   : {d}\n", .{try fmat.det_al()});
-
-    // const fmat_in = try alloc.alloc(mat.FloatType, 100);
-    // @memset(fmat_in, 1);
-    // std.debug.print("[DEBUG] fmat solution = {d}\n", .{try fmat.gauss_al(fmat_in)});
 }
